@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Loader from './components/Loader';
+import StationBox from './components/StationBox';
+import { RootState } from './redux/reducers/index';
+import { getStations } from './redux/reducers/radio/radioActions';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const { isLoading } = useSelector((state: RootState) => state.radio);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getStations());
+  }, []);
+
+  return <div className='App'>{isLoading ? <Loader /> : <StationBox />}</div>;
 }
 
 export default App;

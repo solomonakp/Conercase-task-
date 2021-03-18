@@ -1,0 +1,11 @@
+.iconButton {
+  background: transparent;
+  padding: 0;
+  img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    width: 100%;
+  }
+}

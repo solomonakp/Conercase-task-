@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import './bootstrap-reboot.css';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  font-family: liberation-sans, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-font-kerning: normal;
+  font-kerning: normal;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: #20202b;
+  color: #ffffff;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  image-rendering: auto;
+}
+
+button {
+  white-space: nowrap;
+  display: inline-block;
+  border: 0;
+  background-color: transparent;
+}
+#root,
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }

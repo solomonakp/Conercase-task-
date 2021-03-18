@@ -1,0 +1,20 @@
+.stationTile {
+  padding-top: 20px;
+  &:not(:last-of-type) {
+    border-bottom: 1px solid #5c5c64;
+  }
+  .button {
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+  }
+  span {
+    color: #a2abbd;
+    display: inline-block;
+    font-size: 18px;
+
+    &:first-of-type {
+      margin-right: auto;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.stationDisplay {
+  padding: 20px 20px 30px 20px;
+  height: 90px;
+  border-top: 1px solid #515561;
+  text-align: center;
+  background-color: #25252f;
+  .current {
+    color: #edae61;
+    font-size: 12px;
+  }
+  .stationName {
+    font-size: 24px;
+    color: #a2abbd;
+  }
+}
