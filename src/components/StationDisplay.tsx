@@ -1,17 +1,14 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import styles from './styles/StationDisplay.module.scss';
-import { RootState } from '../redux/reducers/index';
-interface Props {}
+interface Props {
+  name: string | null;
+}
 
-const StationDisplay = (props: Props) => {
-  const {
-    radio: { currentStation },
-  } = useSelector((state: RootState) => state);
+const StationDisplay = ({ name }: Props) => {
   return (
     <div className={styles.stationDisplay}>
       <div className={styles.current}>CURRENTLY PLAYING</div>
-      <div className={styles.stationName}>{currentStation}</div>
+      <div className={styles.stationName}>{name}</div>
     </div>
   );
 };

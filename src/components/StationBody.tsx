@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import StationTile from './StationTile';
 import styles from './styles/StationBody.module.scss';
 import SimpleBar from 'simplebar-react';
-import 'simplebar/dist/simplebar.min.css';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/reducers/index';
 import { StationProps } from '../stationsObject';
+import 'simplebar/dist/simplebar.min.css';
 
 const StationBody = () => {
   const {
