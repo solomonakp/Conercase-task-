@@ -15,7 +15,7 @@ Radio Widget is a React Component that manages radio stations. its is mostly sta
 
 ## Live Demo
 
-[Live Demo Link](https://accountable-person.herokuapp.com/)
+[Live Demo Link](https://radio-widget-three.vercel.app/)
 
 ## Getting Started
 
