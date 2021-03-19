@@ -3,19 +3,28 @@ import IconButton from './IconButton';
 import styles from './styles/StationNav.module.scss';
 import back from '../assets/back-arrow.png';
 import power from '../assets/switch.png';
-interface Props {}
 
-export const StationNav = (props: Props) => {
+export const StationNav = () => {
   return (
     <div className={styles.stationNav}>
       <nav>
         <ul>
           <li>
-            <IconButton src={back} alt='' />
+            <IconButton
+              src={back}
+              testId='nav-btn'
+              alt='back-icon-btn'
+              label='back button'
+            />
           </li>
           <li>Stations</li>
           <li>
-            <IconButton src={power} alt='' />
+            <IconButton
+              src={power}
+              testId='nav-btn'
+              alt='power-icon-btn'
+              label='power button'
+            />
           </li>
         </ul>
       </nav>

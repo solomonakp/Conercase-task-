@@ -2,6 +2,7 @@ import { StationProps } from '../../../stationsObject';
 export const TOGGLE_STATIONS_LOADING = 'TOGGLE_STATIONS_LOADING';
 export const SET_STATION = 'SET_STATION';
 export const GET_STATIONS = 'GET_STATIONS';
+export const TOGGLE_STATION_LOADING = 'TOGGLE_STATION_LOADING';
 
 interface ToggleLoadingStationsAction {
   type: typeof TOGGLE_STATIONS_LOADING;
@@ -16,6 +17,10 @@ interface GetStationsAction {
   payload: Array<StationProps>;
 }
 
+interface ToggleStationLoadingAction {
+  type: typeof TOGGLE_STATION_LOADING;
+}
+
 export interface RadioState {
   isLoading: boolean;
   stations: Array<StationProps> | [];
@@ -27,4 +32,5 @@ export interface RadioState {
 export type RadioActionTypes =
   | ToggleLoadingStationsAction
   | SetStationAction
-  | GetStationsAction;
+  | GetStationsAction
+  | ToggleStationLoadingAction;

@@ -1,0 +1,9 @@
+import React, { useContext } from 'react';
+import { render, fireEvent } from '@testing-library/react';
+
+describe('The Station Nav component', () => {
+  it('❌dfd', () => {});
+
+  xit('❌', () => {});
+  xit('❌', () => {});
+});

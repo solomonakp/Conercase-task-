@@ -7,6 +7,7 @@ import {
   TOGGLE_STATIONS_LOADING,
   SET_STATION,
   RadioActionTypes,
+  TOGGLE_STATION_LOADING,
 } from './radioTypes';
 
 export type Dispatch = ThunkDispatch<RootState, void, Action>;
@@ -19,7 +20,15 @@ export const toggleStationsLoading = (): RadioActionTypes => {
 };
 
 export const toggleStation = (index: number) => (dispatch: Dispatch) => {
+  dispatch({
+    type: TOGGLE_STATION_LOADING,
+  });
   dispatch({ type: SET_STATION, payload: index });
+  setTimeout(() => {
+    dispatch({
+      type: TOGGLE_STATION_LOADING,
+    });
+  }, 1000);
 };
 
 export const getStations = () => (dispatch: Dispatch) => {

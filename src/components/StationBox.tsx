@@ -8,13 +8,13 @@ import { RootState } from '../redux/reducers/index';
 
 const StationBox = () => {
   const {
-    radio: { currentStation },
+    radio: { currentStation, stations, stationLoading },
   } = useSelector((state: RootState) => state);
   return (
-    <div className={styles.stationBox}>
+    <div className={styles.stationBox} data-testid='station-box'>
       <StationNav />
-      <StationBody />
-      <StationDisplay name={currentStation} />
+      <StationBody stations={stations} />
+      <StationDisplay name={currentStation} isLoading={stationLoading} />
     </div>
   );
 };

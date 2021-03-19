@@ -6,6 +6,8 @@ interface IconButtonProps {
   alt: string;
   width?: string;
   height?: string;
+  testId?: string;
+  label: string;
 }
 
 const IconButton: React.FC<IconButtonProps> = ({
@@ -13,11 +15,18 @@ const IconButton: React.FC<IconButtonProps> = ({
   alt,
   width = '20px',
   height = '20px',
+  testId,
+  label,
 }) => {
   return (
     <button
       className={styles.iconButton}
       style={{ width: width, height: height }}
+      data-testid={testId}
+      onClick={() => {
+        console.log('btn was clicked');
+      }}
+      aria-label={label}
     >
       <img src={src} alt={alt} />
     </button>

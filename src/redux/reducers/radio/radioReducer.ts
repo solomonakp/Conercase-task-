@@ -1,5 +1,9 @@
 import { GET_STATIONS, RadioState, RadioActionTypes } from './radioTypes';
-import { TOGGLE_STATIONS_LOADING, SET_STATION } from './radioTypes';
+import {
+  TOGGLE_STATIONS_LOADING,
+  SET_STATION,
+  TOGGLE_STATION_LOADING,
+} from './radioTypes';
 
 const initialState: RadioState = {
   isLoading: true,
@@ -33,6 +37,12 @@ const radioReducer = (
       return {
         ...state,
         stations: action.payload,
+      };
+
+    case TOGGLE_STATION_LOADING:
+      return {
+        ...state,
+        stationLoading: !state.stationLoading,
       };
 
     default:

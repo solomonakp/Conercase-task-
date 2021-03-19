@@ -45,5 +45,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jest-axe": "^3.5.1",
+    "jest-axe": "^4.1.0"
   }
 }

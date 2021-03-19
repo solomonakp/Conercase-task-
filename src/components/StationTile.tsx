@@ -15,7 +15,7 @@ const StationTile: React.FC<StationTileProps> = ({
   frequency,
   index,
 }) => {
-  const { currentStationIndex } = useSelector(
+  const { currentStationIndex, stationLoading } = useSelector(
     (state: RootState) => state.radio
   );
   const isOpen = currentStationIndex === index ? true : false;
@@ -23,13 +23,20 @@ const StationTile: React.FC<StationTileProps> = ({
   const dispatch = useDispatch();
 
   return (
-    <div className={styles.stationTile}>
-      <StationControl isOpen={isOpen} />
+    <div className={styles.stationTile} data-testid='station-tile'>
+      <StationControl isOpen={isOpen} index={index} />
       <button
         className={styles.button}
+        data-testid={`tile-btn-${index}`}
+        disabled={stationLoading}
         onClick={() => {
           dispatch(toggleStation(index));
         }}
+        data-toggle='collapse'
+        data-target={`collapse${index}`}
+        aria-expanded={isOpen}
+        aria-controls={`collapse${index}`}
+        aria-pressed={isOpen}
       >
         <span>{station}</span>
         <span>{frequency}</span>

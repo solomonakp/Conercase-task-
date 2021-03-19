@@ -3,4 +3,7 @@
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 21px 18px -5px #14141b;
+  @media (max-width: 375px) {
+    width: 300px;
+  }
 }

@@ -19,6 +19,7 @@ const Loader: React.FC<LoaderProps> = ({ type = 1, fixed = false }) => {
         top: fixed ? 0 : 'initial',
         bottom: fixed ? 0 : 'initial',
       }}
+      data-testid='loader'
     >
       {type === 1 ? (
         <div className={styles.ldsRoller}>
