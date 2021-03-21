@@ -37,6 +37,7 @@ const StationTile: React.FC<StationTileProps> = ({
         aria-expanded={isOpen}
         aria-controls={`collapse${index}`}
         aria-pressed={isOpen}
+        style={{ color: isOpen ? '#ecaa5b' : '' }}
       >
         <span>{station}</span>
         <span>{frequency}</span>
